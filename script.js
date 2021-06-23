@@ -10,12 +10,12 @@ var specialChar = "~!@#$%^&*`{}[]|:;'<>?,./";
 function generatePassword(){
 
     // set up promts
-    var getLength = window.prompt("Write the length of the password. (range of 8-128 characters");
-        // alert window pops if number entered is not in range of 8-128
-        if (getLength < 8 || getLength > 128) {
-        window.alert("Invalid enter. Please enter number from 8-128!");
-        return;
-        }
+    var getLength = window.prompt("Enter the length of the password. (From 8-128)");
+    // alert window pops if number entered is not in range of 8-128
+    if (getLength < 8 || getLength > 128) {
+      window.alert("Invalid enter. Please enter number from 8-128!");
+      return;
+    }
 
     var selectedChar = "";
     var includeUpper = window.confirm("Do you want to include UPPERCASES?");
