@@ -11,53 +11,45 @@ function generatePassword(){
 
     // set up promts
     var getLength = window.prompt("Write the length of the password. (range of 8-128 characters");
-    if (getLength < 8 || getLength > 128) {
+        // alert window pops if number entered is not in range of 8-128
+        if (getLength < 8 || getLength > 128) {
         window.alert("Invalid enter. Please enter number from 8-128!");
         return;
-    }
+        }
 
-    var selected = "";
+    var selectedChar = "";
     var includeUpper = window.confirm("Do you want to include UPPERCASES?");
     var includeLower = window.confirm("Do you want to include LOWERCASES?");
     var includenumber = window.confirm("Do you want to include NUMBERS?");
     var includesymbol = window.confirm("Do you want to include SYMBOLS?");
 
+    //if user selected any of the include... var, will be logged
     if (includeUpper == true) {
-        selected += upperCaseChar;
+        selectedChar += upperCaseChar;
     }
     if (includeLower == true) {
-        selected += lowerCaseChar;
+        selectedChar += lowerCaseChar;
     }
     if (includenumber == true) {
-        selected += numChar;
+        selectedChar += numChar;
     }
     if (includesymbol == true) {
-        selected += specialChar;
+        selectedChar += specialChar;
     }
-    console.log(selected); // the select var with confirm window works !
 
     var getPassword = "";
-    //get password length -> parseInt is used to convert it in number
+    //get password length -> parseInt is used to convert string to number
     var passwordLength = parseInt(getLength);
-
-    console.log(passwordLength);
 
     // create for loop to get the length
     for(var i=0; i < passwordLength; i++) {
-        var random = Math.floor(Math.random() * selected.length);
-        getPassword = getPassword + selected[random];
+        // random variable to select random characters from selected
+        var random = Math.floor(Math.random() * selectedChar.length);
+        getPassword = getPassword + selectedChar[random];
     }
-
-    console.log(getPassword);
 
     return getPassword;
 }
-
-
-
-
-
-
 
 // Given: write password to the #password input
 function writePassword() {
@@ -67,9 +59,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-
-
 
 // Given: add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
