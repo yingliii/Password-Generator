@@ -4,11 +4,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Passwords</title>
+    <title>Passwords Generator</title>
 
-    <link href="/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="password-generator-container">
+      <div class="password-generator-wrapper">
+        <div class="password-field">
+          <input type="text" name="password" id="password" value="random password {>: {)_+ ." />
+          <button class="password-copy password-copied" id="copyButton" type="button">
+            <i class="fa-regular fa-copy fa-4x"></i>
+            <span>Copied!</span>
+          </button>
+        </div>
+
+        <div class="password-range">
+          <!-- RANGE SLIDER to select length of characters -->
+          <input
+            type="range"
+            min="1"
+            max="50"
+            value="10"
+            class="password-slider"
+            id="passwordRange"
+          />
+          <!-- &nbsp is forcing a space between span tag and characters -->
+          <span class="password-length" id="passwordLength">10</span>&nbsp;characters
+        </div>
+
+        <div class="password-checkbox-field">
+          <div class="password-checkbox">
+            <input type="checkbox" id="symbols" />
+            <label for="symbols"><strong> Symbols</strong> (@#$%)</label>
+          </div>
+          <div class="password-checkbox">
+            <input type="checkbox" id="numbers" />
+            <label for="numbers"><strong> Numbers</strong> (1234)</label>
+          </div>
+          <div class="password-checkbox">
+            <input type="checkbox" id="lowercase" checked="checked" />
+            <label for="lowercase"><strong> Lowercase Characters</strong> (abcd)</label>
+          </div>
+          <div class="password-checkbox">
+            <input type="checkbox" id="uppercase" checked="checked" />
+            <label for="uppercase"><strong> Uppercase Characters</strong> (ABCD)</label>
+          </div>
+          <div class="password-checkbox">
+            <input type="checkbox" id="similar" checked="checked" />
+            <label for="similar"><strong> Similar Characters</strong> (i,I,1,L,o,0,O)</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="/script.js"></script>
   </body>
 </html>
