@@ -27,8 +27,8 @@
     <div class="password-generator-container">
       <div class="password-generator-wrapper">
         <div class="password-field">
-          <input type="text" name="password" id="password" value="random password {>: {)_+ ." />
-          <button class="password-copy password-copied" id="copyButton" type="button">
+          <input type="text" name="password" id="password" value="" />
+          <button class="password-copy" id="copyButton" type="button">
             <i class="fa-regular fa-copy fa-4x"></i>
             <span>Copied!</span>
           </button>
@@ -51,7 +51,7 @@
         <div class="password-checkbox-field">
           <div class="password-checkbox">
             <input type="checkbox" id="symbols" />
-            <label for="symbols"><strong> Symbols</strong> (@#$%)</label>
+            <label for="symbols"><strong> Symbols</strong> (@#$%^&*)</label>
           </div>
           <div class="password-checkbox">
             <input type="checkbox" id="numbers" />
@@ -65,14 +65,14 @@
             <input type="checkbox" id="uppercase" checked="checked" />
             <label for="uppercase"><strong> Uppercase Characters</strong> (ABCD)</label>
           </div>
-          <div class="password-checkbox">
+          <!-- <div class="password-checkbox">
             <input type="checkbox" id="similar" checked="checked" />
             <label for="similar"><strong> Similar Characters</strong> (i,I,1,L,o,0,O)</label>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
 
-    <script src="/script.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>
