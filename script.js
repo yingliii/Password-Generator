@@ -80,3 +80,4 @@ const generatePassword = (length, hasSymbols, hasNumbers, hasLowercase, hasUpper
 // FUTURE DEVELOPMENT
 // 1. have a checkbox for excluding similar characters
 // 2. The rangeText is changing to the range slider bar value while sliding
+// 3. Add a button to generate a new password based on current selection
